@@ -7,7 +7,7 @@ module("Integration | Component | pretty-color", function(hooks) {
   setupRenderingTest(hooks);
 
   test("should change colors", async function(assert) {
-    assert.expect(1);
+    assert.expect(2);
 
     // set the outer contect to red
     this.set("colorValue", "red");
@@ -20,7 +20,7 @@ module("Integration | Component | pretty-color", function(hooks) {
       "starts as red"
     );
 
-    this.set("colorValue", "orange");
+    this.set("colorValue", "green");
 
     assert.equal(
       this.element.querySelector("div").getAttribute("style"),
